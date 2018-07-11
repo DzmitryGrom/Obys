@@ -2,9 +2,10 @@
 
   /*varibles*/
   var changePosition,
-    videoShow,
     getRandom,
     video = $('#video'),
+    text = $('.slide__text-center'),
+    slideBtnStart = $('.slide__start'),
     container = $('.container'),
     skipBtn = $('.slide__skip'),
     skipBtnPlay = $('.slide__play'),
@@ -61,6 +62,7 @@
 
   skipBtn.on("click", function () {
     video.get(0).volume = 0;
+    video.trigger('play');
     container.removeClass('container_hide');
     container.addClass('container_change-size');
     $(this).removeClass('slide__skip_show');
@@ -78,12 +80,18 @@
 
   if (!slideTwo.hasClass("slide_active")) {
     setTimeout(function () {
-      video.attr('src', 'interface/video/show.mp4');
-      video.trigger('currentTime');
-      container.removeClass('container_hide');
-      changePosition();
+      text.addClass('slide__text-center_hide');
+      slideBtnStart.addClass('slide__start_show');
     }, 3000);
   }
+
+  slideBtnStart.on("click", function () {
+    video.trigger('currentTime');
+    video.trigger('play');
+
+    container.removeClass('container_hide');
+    changePosition();
+  });
 
   skipBtnPlay.hover(function () {
     container.toggleClass('container_hover');
