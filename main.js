@@ -2,19 +2,18 @@
 
   /*varibles*/
   var changePosition,
-      changeClass,
-      videoShow,
-      getRandom,
-      video = $('#video'),
-      container = $('.container'),
-      skipBtn = $('.slide__skip'),
-      skipBtnPlay = $('.slide__play'),
-      slideOne = $('.slide_one'),
-      slideTwo = $('.slide_two'),
-      playBtn = $('.slide__play'),
-      cursor = $('.cursor'),
-      noise = document.querySelector('.noise'),
-      noiseStyle = noise.style;
+    videoShow,
+    getRandom,
+    video = $('#video'),
+    container = $('.container'),
+    skipBtn = $('.slide__skip'),
+    skipBtnPlay = $('.slide__play'),
+    slideOne = $('.slide_one'),
+    slideTwo = $('.slide_two'),
+    playBtn = $('.slide__play'),
+    cursor = $('.cursor'),
+    noise = document.querySelector('.noise'),
+    noiseStyle = noise.style;
 
   /*шум*/
   getRandom = function (max) {
@@ -44,21 +43,20 @@
       }, 100);
     });
 
-  videoShow = function () {
-    setTimeout(function () {
-      video.get(0).volume = 0;
+  $(document).ready(function () {
+    video.on('ended', function () {
       container.addClass('container_change-size');
       $(skipBtn).removeClass('slide__skip_show');
-    }, 34000);
-  };
+      video.attr('loop', 'loop');
+      video.get(0).volume = 0;
+      video.get(0).currentTime = 0;
+      video.trigger('play');
+    });
+  });
 
   changePosition = function () {
     slideOne.removeClass('slide_active');
     slideTwo.addClass('slide_active');
-  };
-
-  changeClass = function () {
-
   };
 
   skipBtn.on("click", function () {
@@ -66,7 +64,7 @@
     container.removeClass('container_hide');
     container.addClass('container_change-size');
     $(this).removeClass('slide__skip_show');
-    if (!slideTwo.hasClass("slide_active")){
+    if (!slideTwo.hasClass("slide_active")) {
       changePosition();
     }
   });
@@ -76,7 +74,6 @@
     video.get(0).currentTime = 0;
     container.removeClass('container_change-size');
     $(skipBtn).addClass('slide__skip_show');
-    videoShow();
   });
 
   if (!slideTwo.hasClass("slide_active")) {
@@ -85,11 +82,10 @@
       video.trigger('currentTime');
       container.removeClass('container_hide');
       changePosition();
-      videoShow();
     }, 3000);
   }
 
-  skipBtnPlay.hover(function() {
+  skipBtnPlay.hover(function () {
     container.toggleClass('container_hover');
   });
 
