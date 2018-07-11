@@ -1,0 +1,22 @@
+{
+  "name": "obys",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start -s -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DzmitryGrom/Obys.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.24.4"
+  },
+  "bugs": {
+    "url": "https://github.com/DzmitryGrom/Obys/issues"
+  },
+  "homepage": "https://github.com/DzmitryGrom/Obys#readme"
+}
