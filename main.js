@@ -81,7 +81,7 @@
 
   if (!slideTwo.hasClass("slide_active")) {
     setTimeout(function () {
-      video.trigger('play');
+      video.attr('src', 'interface/video/show.mp4');
       video.trigger('currentTime');
       container.removeClass('container_hide');
       changePosition();
