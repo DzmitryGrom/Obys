@@ -59,7 +59,7 @@
     slideOne.removeClass('slide_active');
     slideTwo.addClass('slide_active');
   };
-  
+
   isTouchDevice = function () {
     return 'ontouchstart' in document.documentElement;
   }
@@ -113,11 +113,9 @@
     getRandom = function (max) {
       return Math.floor(Math.random() * ++max);
     };
-    setTimeout(function () {
-      setInterval(function () {
-        noiseStyle.backgroundPosition = getRandom(200) + 'px ' + getRandom(200) + 'px';
-      }, 50);
-    }, 5000);
+    setInterval(function () {
+      noiseStyle.backgroundPosition = getRandom(200) + 'px ' + getRandom(200) + 'px';
+    }, 50);
 
     /*cursur*/
     $(document)
