@@ -437,6 +437,11 @@ p {
     transition: all 0.2s;
 }
 
+.container video {
+    width: 100%;
+    height: 100%;
+}
+
 .container_hide {
     opacity: 0;
     z-index: 1;
