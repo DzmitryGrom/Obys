@@ -12,7 +12,7 @@
 <body>
 <div class="wrapper">
     <div class="noise"></div>
-    <div class="slide slide_one slide_active">
+    <div class="slide slide_one  slide_active">
         <div class="slide__text-center">
             <div class="equilizer">
                 <span class="bar" transform="translate(0,0)" y="15"></span>
@@ -22,9 +22,7 @@
             Here will be sound
         </div>
         <div class="slide__start">
-            <span class="icon icon-start">
-                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136.57 189.57"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-miterlimit:10;}</style></defs><title>ae</title><path class="cls-1" d="M121.45,57.6l131,92a2.28,2.28,0,0,1,0,3.24l-131,92a2.29,2.29,0,0,1-3.91-1.62v-184A2.29,2.29,0,0,1,121.45,57.6Z" transform="translate(-117.04 -56.42)"/></svg>
-            </span>
+            <img class="icon icon-start" src="/interface/video/btn.gif" alt="кнопка">
             <span class="text">Start</span>
         </div>
     </div>
@@ -34,10 +32,8 @@
                 <div class="slide__left">
                     <span class="icon icon-logo"></span>
                 </div>
-                <div class="slide__center">
-                    <p>creative design agency</p>
-                </div>
                 <div class="slide__right">
+                    <p>creative design agency</p>
                     <a href="https://dribbble.com/obys" class="slide__link">
                         our works
                         <span class="icon icon-arrow">
@@ -51,6 +47,12 @@
                 </div>
             </div>
             <div class="slide__main">
+                <span id="animate" class="slide__animate-text slide__animate-text_start">
+                    <span>o</span>
+                    <span>b</span>
+                    <span>y</span>
+                    <span>s</span>
+                </span>
                 <span class="slide__play">
                     <span class="icon icon-play">
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -97,15 +99,16 @@
                     <p>full website</p>
                     <p>is coming soon...</p>
                 </div>
-                <div class="slide__center">
-                    <a href="https://dribbble.com/obys" class="slide__link slide__link_social">dr</a>
-                    <a href="https://www.behance.net/obys" class="slide__link slide__link_social">be</a>
-                    <a href="https://www.instagram.com/obys_agency/" class="slide__link slide__link_social">in</a>
-                    <a href="https://www.facebook.com/obysagency/" class="slide__link slide__link_social">fb</a>
-                    <a href="https://twitter.com/obys_agency" class="slide__link slide__link_social">tw</a>
-                </div>
                 <div class="slide__right">
-                    <a href="info@obys.agency" class="slide__link" title="Почта для связи">
+                    <div class="slide__links">
+                        <a href="https://dribbble.com/obys" class="slide__link slide__link_social">dr</a>
+                        <a href="https://www.behance.net/obys" class="slide__link slide__link_social">be</a>
+                        <a href="https://www.instagram.com/obys_agency/" class="slide__link slide__link_social">in</a>
+                        <a href="https://www.facebook.com/obysagency/" class="slide__link slide__link_social">fb</a>
+                        <a href="https://twitter.com/obys_agency" class="slide__link slide__link_social">tw</a>
+                        <a href="mailto:info@obys.agency" class="slide__link" title="Почта для связи"></a>
+                    </div>
+                    <a href="https://dribbble.com/obys" class="slide__link">
                         info@obys.agency
                         <span class="icon icon-arrow">
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -122,7 +125,6 @@
     <div class="container container_hide">
         <video width="100%" height="100%" id="video" type='video/mp4' src="interface/video/show.mp4"></video>
     </div>
-
 </div>
 <div class="cursor cursor_first"></div>
 <div class="cursor cursor_second"></div>

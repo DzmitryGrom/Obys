@@ -2,4 +2,8 @@
     font-family: NeueHansRegular;
     src: url(../fonts/NeueHansKendrick-Regular.otf) format("opentype");
 }
+@font-face {
+    font-family: ThisRegular;
+    src: url(../fonts/This-Regular.otf) format("opentype");
+}
 
