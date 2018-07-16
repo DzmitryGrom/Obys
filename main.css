@@ -435,7 +435,6 @@ p {
     opacity: 1;
     transition: all 0.5s;
     margin: 0;
-    height: 100%;
 }
 
 .container_change-size #poster {

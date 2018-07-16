@@ -79,7 +79,6 @@
       video.trigger('play');
       video.get(0).volume = 1;
       video.get(0).currentTime = 0;
-
       container.removeClass('container_change-size');
       skipBtn.addClass('slide__skip_show');
     }, 100);
@@ -102,11 +101,11 @@
     }, 3000);
   }
 
-  slideBtnPlay.hover(function () {
-    container.toggleClass('container_hover');
-  });
-
   if (!isTouchDevice()) {
+    /*Hover*/
+    slideBtnPlay.hover(function () {
+      container.toggleClass('container_hover');
+    });
     /*шум*/
     getRandom = function (max) {
       return Math.floor(Math.random() * ++max);
