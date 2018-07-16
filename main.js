@@ -29,10 +29,7 @@
     video.on('ended', function () {
       container.addClass('container_change-size');
       skipBtn.removeClass('slide__skip_show');
-      video.attr('loop', 'loop');
-      video.get(0).volume = 0;
-      video.get(0).currentTime = 0;
-      video.trigger('play');
+      video.trigger('stop');
       addAnimateText();
     });
   };
@@ -66,8 +63,8 @@
 
   skipBtn.on("click", function () {
     video.get(0).volume = 0;
-    video.trigger('play');
-    video.attr('loop', 'loop');
+    video.get(0).currentTime = 0;
+    video.trigger('pause');
     container.removeClass('container_hide');
     container.addClass('container_change-size');
     addAnimateText();
@@ -79,9 +76,10 @@
 
   playBtn.on("click", function () {
     setTimeout(function () {
-      video.removeAttr('loop');
+      video.trigger('play');
       video.get(0).volume = 1;
       video.get(0).currentTime = 0;
+
       container.removeClass('container_change-size');
       skipBtn.addClass('slide__skip_show');
     }, 100);
