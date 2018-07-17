@@ -8,9 +8,12 @@
     removeAnimateText,
     video = $('#video'),
     animateText = $('#animate'),
+    headerElem = $('.slide__header'),
+    footerElem = $('.slide__footer'),
     text = $('.slide__text-center'),
     slideBtnStart = $('.slide__start'),
     container = $('.container'),
+    poster = $('#poster'),
     skipBtn = $('.slide__skip'),
     slideBtnPlay = $('.slide__play'),
     slideOne = $('.slide_one'),
@@ -32,6 +35,8 @@
   addAnimateText = function () {
     setTimeout(function () {
       animateText.addClass('slide__animate-text_show');
+      headerElem.addClass('slide__show');
+      footerElem.addClass('slide__show');
       setTimeout(function () {
         animateText.removeClass('slide__animate-text_start');
       }, 500);
@@ -41,6 +46,8 @@
   removeAnimateText = function () {
     animateText.removeClass('slide__animate-text_show');
     animateText.addClass('slide__animate-text_hide');
+    headerElem.removeClass('slide__show');
+    footerElem.removeClass('slide__show');
     setTimeout(function () {
       animateText.removeClass('slide__animate-text_hide');
       animateText.addClass('slide__animate-text_start');
@@ -99,7 +106,7 @@
   if (!isTouchDevice()) {
     /*Hover*/
     slideBtnPlay.hover(function () {
-      container.toggleClass('container_hover');
+      poster.toggleClass('poster_hover');
     });
     /*cursur*/
 
