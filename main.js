@@ -2,28 +2,23 @@
 
   /*varibles*/
   var changePosition,
-    getRandom,
-    isTouchDevice,
-    autoCloseVideo,
-    addAnimateText,
-    removeAnimateText,
-    video = $('#video'),
-    animateText = $('#animate'),
-    text = $('.slide__text-center'),
-    slideBtnStart = $('.slide__start'),
-    container = $('.container'),
-    skipBtn = $('.slide__skip'),
-    slideBtnPlay = $('.slide__play'),
-    slideOne = $('.slide_one'),
-    slideTwo = $('.slide_two'),
-    playBtn = $('.slide__play'),
-    cursor = $('.cursor'),
-    noise = document.querySelector('.noise'),
-    noiseStyle = noise.style;
-
+      isTouchDevice,
+      autoCloseVideo,
+      addAnimateText,
+      removeAnimateText,
+      video = $('#video'),
+      animateText = $('#animate'),
+      text = $('.slide__text-center'),
+      slideBtnStart = $('.slide__start'),
+      container = $('.container'),
+      skipBtn = $('.slide__skip'),
+      slideBtnPlay = $('.slide__play'),
+      slideOne = $('.slide_one'),
+      slideTwo = $('.slide_two'),
+      playBtn = $('.slide__play'),
+      cursor = $('.cursor');
 
   /*анимация переходов слайдов*/
-
 
   autoCloseVideo = function () {
     video.on('ended', function () {
@@ -106,14 +101,6 @@
     slideBtnPlay.hover(function () {
       container.toggleClass('container_hover');
     });
-    /*шум*/
-    getRandom = function (max) {
-      return Math.floor(Math.random() * ++max);
-    };
-    setInterval(function () {
-      noiseStyle.backgroundPosition = getRandom(200) + 'px ' + getRandom(200) + 'px';
-    }, 50);
-
     /*cursur*/
     $(document)
       .mousemove(function (e) {
