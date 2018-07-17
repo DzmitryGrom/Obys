@@ -671,13 +671,31 @@ p {
     -webkit-appearance: none;
 }
 
+#video::-moz-media-controls-start-playback-button {
+    display: none!important;
+    -webkit-appearance: none;
+}
+
 #video::-webkit-media-controls {
+    display:none !important;
+}
+
+#video::-moz-media-controls {
     display:none !important;
 }
 
 #video::-webkit-media-controls-start-playback-button {
     display: none!important;
     -webkit-appearance: none;
+}
+
+#video::-moz-media-controls-start-playback-button {
+    display: none!important;
+    -webkit-appearance: none;
+}
+
+#video {
+    z-index: 2147483647;
 }
 
 /*Media Query*/

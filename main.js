@@ -2,21 +2,21 @@
 
   /*varibles*/
   var changePosition,
-      isTouchDevice,
-      autoCloseVideo,
-      addAnimateText,
-      removeAnimateText,
-      video = $('#video'),
-      animateText = $('#animate'),
-      text = $('.slide__text-center'),
-      slideBtnStart = $('.slide__start'),
-      container = $('.container'),
-      skipBtn = $('.slide__skip'),
-      slideBtnPlay = $('.slide__play'),
-      slideOne = $('.slide_one'),
-      slideTwo = $('.slide_two'),
-      playBtn = $('.slide__play'),
-      cursor = $('.cursor');
+    isTouchDevice,
+    autoCloseVideo,
+    addAnimateText,
+    removeAnimateText,
+    video = $('#video'),
+    animateText = $('#animate'),
+    text = $('.slide__text-center'),
+    slideBtnStart = $('.slide__start'),
+    container = $('.container'),
+    skipBtn = $('.slide__skip'),
+    slideBtnPlay = $('.slide__play'),
+    slideOne = $('.slide_one'),
+    slideTwo = $('.slide_two'),
+    playBtn = $('.slide__play'),
+    cursor = $('.cursor');
 
   /*анимация переходов слайдов*/
 
@@ -102,6 +102,7 @@
       container.toggleClass('container_hover');
     });
     /*cursur*/
+
     $(document)
       .mousemove(function (e) {
         cursor
@@ -120,6 +121,8 @@
         }, 100);
       });
   } else {
+    cursor.css({display: 'none'});
+
     $(document)
       .mousemove(function (e) {
         cursor
