@@ -5,6 +5,7 @@
     isTouchDevice,
     autoCloseVideo,
     addAnimateText,
+    addAnimateButton,
     removeAnimateText,
     video = $('#video'),
     animateText = $('#animate'),
@@ -29,29 +30,32 @@
       skipBtn.removeClass('slide__skip_show');
       video.trigger('stop');
       addAnimateText();
+      addAnimateButton();
     });
   };
 
   addAnimateText = function () {
     setTimeout(function () {
-      animateText.addClass('slide__animate-text_show');
       headerElem.addClass('slide__show');
       footerElem.addClass('slide__show');
-      setTimeout(function () {
-        animateText.removeClass('slide__animate-text_start');
-      }, 500);
+      animateText.addClass('slide__animate-text_show');
+      playBtn.addClass('slide__play_show');
     }, 1000);
+
+  };
+
+  addAnimateButton = function () {
+    setTimeout(function () {
+      playBtn.addClass('slide__play_show');
+    }, 250);
+
   };
 
   removeAnimateText = function () {
     animateText.removeClass('slide__animate-text_show');
-    animateText.addClass('slide__animate-text_hide');
     headerElem.removeClass('slide__show');
     footerElem.removeClass('slide__show');
-    setTimeout(function () {
-      animateText.removeClass('slide__animate-text_hide');
-      animateText.addClass('slide__animate-text_start');
-    }, 500);
+    playBtn.removeClass('slide__play_show');
   };
 
   changePosition = function () {
@@ -70,6 +74,7 @@
     container.removeClass('container_hide');
     container.addClass('container_change-size');
     addAnimateText();
+    addAnimateButton();
     $(this).removeClass('slide__skip_show');
     if (!slideTwo.hasClass("slide_active")) {
       changePosition();

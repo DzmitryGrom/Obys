@@ -1,9 +1,9 @@
 @font-face {
-    font-family: NeueHansRegular;
-    src: url(../fonts/NeueHansKendrick-Regular.otf) format("opentype");
-}
-@font-face {
-    font-family: ThisRegular;
-    src: url(../fonts/This-Regular.otf) format("opentype");
+    font-family: NeueHansLight;
+    src: url(../fonts/NeueHansKendrick-Light.otf) format("opentype");
 }
 
+@font-face {
+    font-family: NeueHansLight;
+    src: url(../fonts/NeueHansKendrick-Light.ttf) format("opentype");
+}
