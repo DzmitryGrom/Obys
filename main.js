@@ -34,21 +34,20 @@
     });
   };
 
+  addAnimateButton = function () {
+    setTimeout(function () {
+      playBtn.addClass('slide__play_show');
+    }, 250);
+
+  };
+
   addAnimateText = function () {
     setTimeout(function () {
       headerElem.addClass('slide__show');
       footerElem.addClass('slide__show');
       animateText.addClass('slide__animate-text_show');
       playBtn.addClass('slide__play_show');
-    }, 850);
-
-  };
-
-  addAnimateButton = function () {
-    setTimeout(function () {
-      playBtn.addClass('slide__play_show');
-    }, 250);
-
+    }, 500);
   };
 
   removeAnimateText = function () {

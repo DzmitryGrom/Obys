@@ -67,8 +67,10 @@ p {
     background-color: #fff;
     border-radius: 100%;
     text-align: center;
-    padding: 62px 0;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .icon-play svg {
@@ -633,6 +635,7 @@ p {
 }
 
 .slide__animate-text_show .animat__world {
+
     opacity: 1;
     transform: translateX(0%);
     -webkit-transform: translateX(0%);
@@ -874,7 +877,6 @@ p {
     .icon-play {
         width: 110px;
         height: 110px;
-        padding: 43px 44px;
     }
     .slide__play {
         margin: -59px 0 0 -55px;
@@ -886,7 +888,6 @@ p {
     .icon-play {
         width: 70px;
         height: 70px;
-        padding: 26px 30px;
     }
 
     .slide__play {
@@ -904,7 +905,6 @@ p {
     .icon-play svg {
         width: 13px;
         height: 17px;
-        background-size: 13px 17px;
     }
 }
 
@@ -937,13 +937,11 @@ p {
     .icon-play {
         width: 70px;
         height: 70px;
-        padding: 26px 30px;
     }
 
     .icon-play svg {
         width: 13px;
         height: 17px;
-        background-size: 13px 17px;
     }
 }
 
