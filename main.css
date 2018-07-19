@@ -64,25 +64,16 @@ p {
 .icon-play {
     width: 150px;
     height: 150px;
-    background-color: #fff;
     border-radius: 100%;
     text-align: center;
     box-sizing: border-box;
     position: relative;
     z-index: 1;
+    background-image: url("interface/Plays.svg");
+    background-position: center center;
 }
 
-.icon-play svg {
-    width: 25px;
-    height: 25px;
-    transition: fill .2s;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin: -12.5px 0 0 -12.5px;
 
-
-}
 
 .wrapper, .noise {
     width: 100%;
