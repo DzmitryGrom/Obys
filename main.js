@@ -47,7 +47,7 @@
       footerElem.addClass('slide__show');
       animateText.addClass('slide__animate-text_show');
       playBtn.addClass('slide__play_show');
-    }, 500);
+    }, 700);
   };
 
   removeAnimateText = function () {
