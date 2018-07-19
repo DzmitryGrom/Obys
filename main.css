@@ -234,6 +234,10 @@ p {
 
 }
 
+.slide__animate-text svg {
+    padding-left: 1px;
+}
+
 .slide__left, .slide__right {
     width: 50%;
 }
@@ -250,6 +254,11 @@ p {
     color: #ffffff;
     display: inline-block;
     white-space: nowrap;
+}
+
+.slide__link-arrow {
+    display: flex;
+    align-items: center;
 }
 
 .slide__link_mail {
@@ -362,7 +371,6 @@ p {
 }
 
 .slide__skip {
-    display: inline-block;
     position: fixed;
     right: 120px;
     bottom: 35px;
@@ -371,6 +379,8 @@ p {
     opacity: 0;
     z-index: -1;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
 }
 
 .slide__skip_show {
@@ -511,37 +521,22 @@ p {
 
 .cursor {
     position: absolute;
-    height: 25px;
-    width: 25px;
     border-radius: 50%;
 }
 
-.cursor:before {
-    content: "";
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin: -5px 0 0 -5px;
-    z-index: 1;
-    border-radius: 100%;
-}
-
 .cursor_first {
-    z-index: 20;
-}
-
-.cursor_first:before {
     background-color: #303030;
+    z-index: 20;
+    height: 25px;
+    width: 25px;
 }
 
 .cursor_second {
     z-index: 19;
-}
-
-.cursor_second:before {
     background-color: #fff;
+    width: 23px;
+    height: 23px;
+    margin: 1px 0 0 1px;
 }
 
 .container {
@@ -594,7 +589,7 @@ p {
     overflow: hidden;
 }
 
-.icon-play, #poster img {
+.icon-play, #poster .poster__img {
     transform: scale(1, 1);
     -webkit-transform: scale(1, 1);
     transition-timing-function: ease-out;
@@ -609,12 +604,14 @@ p {
     -o-transition-duration: 550ms;
 }
 
-#poster img {
+#poster .poster__img {
     width: 100%;
     height: 100%;
+    background-size: cover;
+    background-position: center center;
 }
 
-.icon-play:hover, #poster.poster_hover img {
+.icon-play:hover, #poster.poster_hover .poster__img {
     transform: scale(1.2, 1.2);
     -webkit-transform: scale(1.2, 1.2);
     -moz-transform: scale(1.2, 1.2);
@@ -859,7 +856,7 @@ p {
         justify-content: flex-end;
     }
     .slide__link_mail {
-        display: inline-block;
+        display: flex;
     }
     * {
         font-size: 12px;
