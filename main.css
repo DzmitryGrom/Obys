@@ -605,9 +605,8 @@ p {
 }
 
 #poster .poster__img {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
     background-position: center center;
 }
 
@@ -627,19 +626,25 @@ p {
 }
 
 .slide__animate-text .animat__world:last-child {
-    transform: translateX(-1%);
-    -webkit-transform: translateX(-1%);
-    -ms-transform: translateX(-1%);
-    -o-transform: translateX(-1%);
+    transform: translateX(-1.5%);
+    -webkit-transform: translateX(-1.5%);
+    -ms-transform: translateX(-1.5%);
+    -o-transform: translateX(-1.5%);
 }
 
-.slide__animate-text_show .animat__world:last-child,
 .slide__animate-text_show .animat__world {
     opacity: 1;
     transform: translateX(0%);
     -webkit-transform: translateX(0%);
     -ms-transform: translateX(0%);
     -o-transform: translateX(0%);
+}
+
+.slide__animate-text_show .animat__world:last-child {
+    transform: translateX(1%);
+    -webkit-transform: translateX(1%);
+    -ms-transform: translateX(1%);
+    -o-transform: translateX(1%);
 }
 
 
